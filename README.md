@@ -1,4 +1,4 @@
-This build's on the work of [tholman](https://github.com/tholman/github-corners).
+This builds on the work of [tholman](https://github.com/tholman/github-corners).
 
 See the [demo](https://aaronshaf.github.io/github-corner-element/).
 
