@@ -12,6 +12,8 @@ This build's on the work of [tholman](https://github.com/tholman/github-corners)
 <script src="https://unpkg.com/github-corner"></script>
 ```
 
+Basic usage:
+
 ```html
 <github-corner href="https://github.com/aaronshaf/github-corner-element"></github-corner>
 ```
