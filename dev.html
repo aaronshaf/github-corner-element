@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>github-corner-element</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/1.1.1/document-register-element.js"></script>
+  <script src="index.js"></script>
+  <style>
+    pre { margin-top: 8px; }
+    label, .label-text {
+      vertical-align: middle;
+      font-weight: normal;
+      margin-bottom: 0; /* override bootstrap */
+    }
+    .example {
+      margin-top: 36px;
+      margin-bottom: 36px;
+    }
+  </style>
+  <script>
+  // https://github.com/component/escape-html/blob/master/index.js
+  var matchHtmlRegExp = /[""&<>]/;
+  function escapeHtml(a){var b=""+a,c=matchHtmlRegExp.exec(b);if(!c)return b;var d,e="",f=0,g=0;for(f=c.index;f<b.length;f++){switch(b.charCodeAt(f)){case 34:d="&quot;";break;case 38:d="&amp;";break;case 39:d="&#39;";break;case 60:d="&lt;";break;case 62:d="&gt;";break;default:continue}g!==f&&(e+=b.substring(g,f)),g=f+1,e+=d}return g!==f?e+b.substring(g,f):e}
+  </script>
+</head>
+<body>
+  <div style="margin: 48px;">
+    <h1>github-corner-element</h1>
+    <div class="example">
+      <div>Custom Elements polyfill (12.2KB):</div>
+      <pre id="installation1"></pre>
+      <script>
+      installation1.innerHTML = escapeHtml(
+`<scri` + `pt src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/1.1.1/document-register-element.js"></scr` + `ipt>`)
+      </script>
+
+      <div>Our custom element's source:</div>
+      <pre id="installation2"></pre>
+      <script>
+      installation2.innerHTML = escapeHtml(
+`<scrip` + `t src="https://unpkg.com/github-corner-element"></scr` + `ipt>`)
+      </script>
+      <github-corner href="https://github.com/aaronshaf/github-corner-element"></github-corner>
+      <span class="label-text">Usage:</span>
+      <pre id="example1"></pre>
+      <span class="label-text">Specify colors:</span>
+      <pre id="example2"></pre>
+      <span class="label-text">Move to the left corner:</span>
+      <pre id="example3"></pre>
+    </div>
+    <script>
+    example1.innerHTML = escapeHtml(`<github-corner href="https://github.com/aaronshaf/github-corner-element"></github-corner>`)
+    example2.innerHTML = escapeHtml(`<github-corner href="https://github.com/aaronshaf/github-corner-element" fill="white" color="black"></github-corner>`)
+    example3.innerHTML = escapeHtml(`<github-corner href="https://github.com/aaronshaf/github-corner-element" position="left"></github-corner>`)
+    </script>
+  </div>
+</body>
