@@ -8,7 +8,7 @@ This build's on the work of [tholman](https://github.com/tholman/github-corners)
 ```
 
 ```html
-<!-- our custom element's source -->
+<!-- our custom element's source (6.1KB) -->
 <script src="https://unpkg.com/github-corner"></script>
 ```
 
