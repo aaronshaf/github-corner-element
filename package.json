@@ -17,7 +17,7 @@
   "license": "MIT",
   "name": "github-corner",
   "description": "Custom element for GitHub corner",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "directories": {
     "doc": "docs"
   },
