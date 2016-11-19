@@ -10,9 +10,8 @@ This build's on the work of [tholman](https://github.com/tholman/github-corners)
 ```html
 <!-- our custom element's source -->
 <script src="https://unpkg.com/github-corner"></script>
-<link href="https://unpkg.com/github-corner/styles.css" rel="stylesheet">
 ```
 
 ```html
-<github-corner></github-corner>
+<github-corner href="https://github.com/aaronshaf/github-corner-element"></github-corner>
 ```
