@@ -15,7 +15,7 @@ export default class GitHubCorner extends Component {
       <div>
         <a
           href={props.href || 'https://github.com/'}
-          class="github-corner-element"
+          class="github-corner"
           aria-label="View source on Github"
         >
           <svg
