@@ -15,3 +15,15 @@ This build's on the work of [tholman](https://github.com/tholman/github-corners)
 ```html
 <github-corner href="https://github.com/aaronshaf/github-corner-element"></github-corner>
 ```
+
+Specify colors:
+
+```html
+<github-corner href="https://github.com/aaronshaf/github-corner-element" fill="white" color="black"></github-corner>
+```
+
+Move it to the left:
+
+```html
+<github-corner href="https://github.com/aaronshaf/github-corner-element" position="left"></github-corner>
+```
