@@ -3,10 +3,6 @@ import preact from 'preact'
 import GitHubCorner from './components'
 
 export default class GithubCornerElement extends HTMLElement {
-  // constructor() {
-  //   super();
-  // }
-
   static get observedAttributes() { return ['fill', 'color', 'href', 'position'] }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -25,11 +21,7 @@ export default class GithubCornerElement extends HTMLElement {
   }
 
   updateRendering () {
-    console.log({
-      color: this.color,
-      fill: this.fill
-    })
-    const a = preact.render(<GitHubCorner
+    preact.render(<GitHubCorner
       color={this.color}
       fill={this.fill}
       href={this.href}
