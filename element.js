@@ -2,7 +2,7 @@
 import preact from 'preact'
 import GitHubCorner from './components'
 
-export default class GithubCornerElement extends HTMLElement {
+export default class GithubCornerElement extends BabelHTMLElement {
   static get observedAttributes() { return ['fill', 'color', 'href', 'position'] }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -30,3 +30,11 @@ export default class GithubCornerElement extends HTMLElement {
     this.rendered = true
   }
 }
+
+// https://github.com/w3c/webcomponents/issues/587#issuecomment-254126763
+function BabelHTMLElement() {
+  const newTarget = this.__proto__.constructor
+  return Reflect.construct(HTMLElement, [], newTarget)
+}
+Object.setPrototypeOf(BabelHTMLElement, HTMLElement)
+Object.setPrototypeOf(BabelHTMLElement.prototype, HTMLElement.prototype)
