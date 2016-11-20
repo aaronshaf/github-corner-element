@@ -11,7 +11,7 @@ See the [demo](https://aaronshaf.github.io/github-corner-element/).
 
 ```html
 <!-- our custom element's source (6.1KB) -->
-<script src="https://unpkg.com/github-corner@1.0.12"></script>
+<script src="https://unpkg.com/github-corner@1.0.13"></script>
 ```
 
 Basic usage:
