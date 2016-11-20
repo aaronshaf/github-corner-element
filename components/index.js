@@ -4,8 +4,26 @@ import preact, { Component } from 'preact'
 import classNames from 'classnames'
 
 export default class GitHubCorner extends Component {
+  constructor () {
+    super()
+    this.setSvg = this.setSvg.bind(this)
+  }
+
+  setSvg (node) {
+    this.svg = node
+  }
+
+  componentDidMount () {
+    // workaround for https://github.com/webcomponents/custom-elements/issues/14
+    setTimeout(() => {
+      if (!this.svg.getAttribute('viewBox')) {
+        this.svg.setAttributeNS(null, 'viewBox', this.svg.getAttribute('viewbox'))
+      }
+    }, 0)
+  }
+
   render (props) {
-    let style = `fill:${props.fill || '#000'}; color:${props.color || '#fff'}; position: absolute; top: 0; border: 0;`
+    let style = `fill:${props.fill || '#000000'}; color:${props.color || '#ffffff'}; position: absolute; top: 0; border: 0;`
     if (props.position === 'left') {
       style += 'transform: scale(-1, 1);left: 0;'
     } else {
@@ -19,6 +37,7 @@ export default class GitHubCorner extends Component {
           aria-label="View source on Github"
         >
           <svg
+            ref={this.setSvg}
             width="80"
             height="80"
             viewBox="0 0 250 250"
