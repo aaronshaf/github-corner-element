@@ -11,23 +11,29 @@ See the [demo](https://aaronshaf.github.io/github-corner-element/).
 
 ```html
 <!-- our custom element's source (6.1KB) -->
-<script src="https://unpkg.com/github-corner@1.0.13"></script>
+<script src="https://unpkg.com/github-corner@2.0.0"></script>
 ```
 
 Basic usage:
 
 ```html
-<github-corner href="https://github.com/aaronshaf/github-corner-element"></github-corner>
+<github-corner>
+  <a href="https://github.com/aaronshaf/github-corner-element">GitHub</a>
+</github-corner>
 ```
 
 Specify colors:
 
 ```html
-<github-corner href="https://github.com/aaronshaf/github-corner-element" fill="white" color="black"></github-corner>
+<github-corner fill="white" color="black">
+  <a href="https://github.com/aaronshaf/github-corner-element">GitHub</a>
+ </github-corner>
 ```
 
 Move it to the left:
 
 ```html
-<github-corner href="https://github.com/aaronshaf/github-corner-element" position="left"></github-corner>
+<github-corner position="left">
+  <a href="https://github.com/aaronshaf/github-corner-element">GitHub</a>
+</github-corner>
 ```
