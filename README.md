@@ -2,7 +2,7 @@ This builds on the work of [tholman](https://github.com/tholman/github-corners).
 
 See the [demo](https://aaronshaf.github.io/github-corner-element/).
 
-## React custom element boilerplate
+## Installation
 
 ```html
 <!-- Custom Elements polyfill (2.9KB) -->
@@ -14,7 +14,7 @@ See the [demo](https://aaronshaf.github.io/github-corner-element/).
 <script src="https://unpkg.com/github-corner@2.0.0"></script>
 ```
 
-Basic usage:
+## Basic usage
 
 ```html
 <github-corner>
