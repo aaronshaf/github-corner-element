@@ -32,7 +32,7 @@ export default class GitHubCorner extends Component {
     return (
       <div>
         <a
-          href={props.href || 'https://github.com/'}
+          href={(props.a && props.a.href) || 'https://github.com/'}
           class="github-corner"
           aria-label="View source on Github"
         >
