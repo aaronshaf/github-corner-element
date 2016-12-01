@@ -1,7 +1,6 @@
 /** @jsx preact.h */
 
 import preact, { Component } from 'preact'
-import classNames from 'classnames'
 
 export default class GitHubCorner extends Component {
   constructor () {

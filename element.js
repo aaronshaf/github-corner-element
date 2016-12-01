@@ -1,10 +1,9 @@
 /** @jsx preact.h */
 import preact from 'preact'
 import GitHubCorner from './components'
+import createElementClass from 'create-element-class'
 
-export default class GithubCornerElement extends BabelHTMLElement {
-  static get observedAttributes() { return ['fill', 'color', 'href', 'position'] }
-
+const GithubCornerElement = createElementClass({
   attributeChangedCallback(name, oldValue, newValue) {
     switch (name) {
       case 'fill':
@@ -14,13 +13,13 @@ export default class GithubCornerElement extends BabelHTMLElement {
         this[name] = newValue
     }
     if (this.rendered) { this.updateRendering() }
-  }
+  },
 
   connectedCallback () {
     this.a = this.querySelector('a')
 
     // screenreader-only styles
-    Object.assign(this.a.style, {
+    const styles = {
       border: '0',
       clip: 'rect(0 0 0 0)',
       height: '1px',
@@ -29,9 +28,13 @@ export default class GithubCornerElement extends BabelHTMLElement {
       padding: '0',
       position: 'absolute',
       width: '1px'
+    }
+    // Object.assign not supported on IE11
+    Object.keys(styles).forEach((key) => {
+      this.a.style[key] = styles[key]
     })
     this.updateRendering()
-  }
+  },
 
   updateRendering () {
     preact.render(<GitHubCorner
@@ -42,12 +45,7 @@ export default class GithubCornerElement extends BabelHTMLElement {
     />, this, this.lastChild)
     this.rendered = true
   }
-}
+})
 
-// https://github.com/w3c/webcomponents/issues/587#issuecomment-254126763
-function BabelHTMLElement() {
-  const newTarget = this.__proto__.constructor
-  return Reflect.construct(HTMLElement, [], newTarget)
-}
-Object.setPrototypeOf(BabelHTMLElement, HTMLElement)
-Object.setPrototypeOf(BabelHTMLElement.prototype, HTMLElement.prototype)
+GithubCornerElement.observedAttributes = ['fill', 'color', 'href', 'position']
+export default GithubCornerElement
