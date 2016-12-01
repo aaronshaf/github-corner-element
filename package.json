@@ -1,8 +1,7 @@
 {
   "scripts": {
     "dev": "webpack define.js index.js -p --watch",
-    "build": "webpack define.js index.js -p",
-    "docs": "webpack define.js docs/index.js -p"
+    "build": "webpack define.js index.js -p"
   },
   "main": "index.js",
   "files": [
