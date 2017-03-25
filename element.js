@@ -15,7 +15,17 @@ const GithubCornerElement = createElementClass({
     if (this.rendered) { this.updateRendering() }
   },
 
-  connectedCallback () {
+  connectedCallback() {
+    if (this.querySelector('a')) {
+      this.init()
+    } else {
+      window.requestAnimationFrame(() => {
+        this.init()
+      })
+    }
+  },
+
+  init () {
     this.a = this.querySelector('a')
 
     // screenreader-only styles
